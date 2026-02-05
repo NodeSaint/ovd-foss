@@ -2,4 +2,32 @@
 
 body {
   @apply bg-gray-50 text-gray-900 antialiased;
+  font-feature-settings: "cv02", "cv03", "cv04", "cv11";
+}
+
+/* Smooth transitions */
+* {
+  @apply transition-colors duration-150;
+}
+
+/* Better focus states */
+button:focus-visible,
+input:focus-visible {
+  @apply outline-none ring-2 ring-blue-500 ring-offset-2;
+}
+
+/* Monospace fingerprints */
+.font-mono {
+  font-feature-settings: "tnum";
+  letter-spacing: 0.02em;
+}
+
+/* Card hover effect */
+.card-hover:hover {
+  @apply shadow-md;
+}
+
+/* Dropzone active state */
+.dropzone-active {
+  @apply border-blue-500 bg-blue-50;
 }
